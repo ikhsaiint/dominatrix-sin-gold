@@ -1,0 +1,40 @@
+{
+  "version": 4,
+  "name": "dominatrix.zip",
+  "items": [
+    "Dominatrix.sh",
+    "Dominatrix - Wages of SiN.sh",
+    "dominatrix"
+  ],
+  "items_opt": [],
+  "attr": {
+    "title": "Dominatrix (SiN)",
+    "porter": [
+      "ikhsaint aka om buaya"
+    ],
+    "desc": "A modernized, gamepad-native source port of SiN, Ritual Entertainment's 1998 id Tech 2 shooter. Features widescreen support and a choice of classic OpenGL or OpenGL 3.2 renderers. Requires your own copy of SiN: Gold's game data. Includes a launcher for the Wages of SiN expansion.",
+    "desc_md": null,
+    "inst": "Copy the contents of your SiN: Gold install's base folder into dominatrix/base (do not overwrite the existing game.so). For the Wages of SiN expansion, copy the 2015 folder into dominatrix/2015 (again keep the existing game.so). See README.md for details.",
+    "inst_md": null,
+    "genres": [
+      "fps"
+    ],
+    "image": null,
+    "rtr": false,
+    "exp": false,
+    "runtime": [],
+    "store": [
+      {
+        "name": "Steam",
+        "gameurl": "https://store.steampowered.com/app/1313",
+        "developerurl": "https://en.wikipedia.org/wiki/Ritual_Entertainment"
+      }
+    ],
+    "availability": "full",
+    "reqs": [],
+    "arch": [
+      "aarch64"
+    ],
+    "min_glibc": "2.34"
+  }
+}
