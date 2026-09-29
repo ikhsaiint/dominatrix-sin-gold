@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gameList>
+  <game>
+    <path>./Dominatrix.sh</path>
+    <name>Dominatrix (SiN)</name>
+    <desc>A modernized, gamepad-native source port of SiN, Ritual Entertainment's 1998 id Tech 2 shooter about Colonel John Blade's fight against the SinTEK corporation and its genetically-engineered mutants. Features widescreen support and a choice of classic or updated OpenGL renderers.</desc>
+    <releasedate>19981105T000000</releasedate>
+    <developer>Ritual Entertainment</developer>
+    <publisher>Activision</publisher>
+    <genre>Action</genre>
+    <image>./dominatrix/screenshot.png</image>
+  </game>
+</gameList>
