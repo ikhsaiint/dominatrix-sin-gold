@@ -1,20 +1,26 @@
 # Dominatrix (SiN) Port — Changelog
 
-Base: `dominatrixFixed.zip` (as uploaded).
+Base: `dominatrixFixed_3.zip` / `dominatrix-glibc227.zip` package variants.
 
-## Changed
+## Current runtime update
+
+- Verified `sin.aarch64` requires GLIBC **2.29**.
+- Verified bundled `gl4es.aarch64/libGL.so.1` requires GLIBC **2.27**.
+- The current package-wide minimum is therefore **GLIBC 2.29**.
+- Updated `port.json` from GLIBC 2.34 to **2.29**.
+- Updated README documentation to distinguish the GL4ES 2.27 baseline from the game's 2.29 requirement.
+
+## Launcher changes
 
 Files:
 - `Dominatrix.sh`
 - `Dominatrix - Wages of SiN.sh`
 
-### 1. Conditional gl4es override
+### Conditional gl4es override
 
-The launchers now force the bundled gl4es libraries only when PortMaster's CFW libgl configuration selects the gl4es path (`LIBGL_FB` is set).
+The launchers force the bundled gl4es libraries only when PortMaster's CFW libgl configuration selects the gl4es path (`LIBGL_FB` is set).
 
-This avoids forcing gl4es on systems with native desktop OpenGL/Mesa.
-
-### 2. Line-buffered game output
+### Line-buffered game output
 
 When `stdbuf` is available, game output is run through:
 
@@ -22,7 +28,7 @@ When `stdbuf` is available, game output is run through:
 stdbuf -oL -eL
 ```
 
-with a fallback to the original direct execution when `stdbuf` is unavailable.
+with a fallback to direct execution when `stdbuf` is unavailable.
 
 ## Repository contents
 
