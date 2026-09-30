@@ -6,9 +6,19 @@ This port requires your own copy of SiN: Gold's game data. It is not bundled. Co
 
 Do not use the SiN Unofficial Patch's files: Dominatrix is not compatible with it. If a `pak2.sin` is present in `dominatrix/base`, remove it (per the upstream author).
 
-Requires glibc 2.34 or newer (dArkOS and other modern CFWs), because the bundled gl4es needs it. It will not load on older ArkOS images based on Ubuntu 19.10.
+## Runtime requirement
 
-The bundled `libs.aarch64` (openal-soft 1.24.3, libogg 1.3.6, libvorbis 1.3.7, libtheoradec 1.2.0) are built against a glibc 2.28 baseline with libc++ linked statically, so they need no newer libstdc++, `libmvec` or `libcairo` from the device.
+The current package requires **glibc 2.29 or newer**.
+
+This was verified from the ELF binaries in the current `dominatrix-glibc227.zip` package:
+
+- `sin.aarch64` → GLIBC 2.29
+- bundled `gl4es.aarch64/libGL.so.1` → GLIBC 2.27
+- `libopenal.so.1` and other bundled libraries are below that threshold
+
+Therefore **2.29 is the package-wide minimum**. The `glibc227` name refers to the GL4ES build baseline; it does not mean the whole game requires glibc 2.27.
+
+This is lower than the previous package, whose bundled `libGL.so.1` required GLIBC 2.34.
 
 ## Controls
 
